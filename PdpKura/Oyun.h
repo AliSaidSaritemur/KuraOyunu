@@ -1,7 +1,17 @@
 #ifndef Oyun_H 
 #define Oyun_H
 
+#include "Kisi.h"
 
-int sooo(int x);
+struct Oyun
+{
+	int masadakiPAra;
+	int turSayisi;
+
+};
+
+struct Kisi EnbuyukBul(struct Kisi kisiler[65]);
+
+
 
 #endif

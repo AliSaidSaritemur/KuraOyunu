@@ -1,7 +1,11 @@
 #ifndef Dosya_H 
 #define Dosya_H
 
+#include "Kisi.h"
 
-int sooo(int x);
+struct Dosya
+{
+struct Kisi kisiler [65];
+};
 
 #endif
