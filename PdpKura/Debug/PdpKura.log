@@ -1,4 +1,6 @@
-﻿  Oyun.c
-  Test.c
-  Generating Code...
+﻿  Dosya.c
+C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(18,11): warning C4013: 'strncat' undefined; assuming extern returning int
+C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(23,22): warning C4047: '==': 'int' differs in levels of indirection from 'void *'
+C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(8,7): warning C4101: 'paraustu': unreferenced local variable
+C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(42): warning C4716: 'kisiYazdir': must return a value
   PdpKura.vcxproj -> C:\Users\alisa\source\repos\PdpKura\Debug\PdpKura.exe

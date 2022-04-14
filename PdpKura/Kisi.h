@@ -4,11 +4,13 @@
 
 struct Kisi
 {
-char ad[40];
-char soyad[40];
-int mevcutPara;
-int yatirdigiPara;
+char adSoyad[200];
+float mevcutPara;
+float yatirdigiPara;
 int paraYatirdigiSayi;
+struct Kisi* sonraki;
 };
+
+struct Kisi EnbuyukBul(Kisi);
 
 #endif

@@ -9,9 +9,4 @@ struct Oyun
 	int turSayisi;
 
 };
-
-struct Kisi EnbuyukBul(struct Kisi kisiler[65]);
-
-
-
 #endif

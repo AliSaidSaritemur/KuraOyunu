@@ -150,6 +150,10 @@
     <ClInclude Include="Kisi.h" />
     <ClInclude Include="Oyun.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="DuzenliKisi.txt" />
+    <Text Include="Kisi.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

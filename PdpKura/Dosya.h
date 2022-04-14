@@ -1,11 +1,11 @@
 #ifndef Dosya_H 
 #define Dosya_H
+#define _CRT_SECURE_NO_DEPRECATE
 
 #include "Kisi.h"
+#include <stdio.h>
 
-struct Dosya
-{
-struct Kisi kisiler [65];
-};
+struct Kisi kisiYazdir(char konum[80] );
+
 
 #endif

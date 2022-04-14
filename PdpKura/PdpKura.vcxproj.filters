@@ -42,4 +42,12 @@
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Kisi.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="DuzenliKisi.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

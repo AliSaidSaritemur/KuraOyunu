@@ -1,28 +1,35 @@
 #include <stdio.h>
 #include "Kisi.h"
 #include "Oyun.h"
+#include "Dosya.h"
 int main() {
 
-	
+
 	printf("MEraba BReo");
 
-	struct Kisi kisi= {"ahmet","selam",12123,231,312};
-	struct Kisi kisi1 = { "mur","selam",61213,231,312 };
-	struct Kisi kisi2 = { "asd","selam",12113,231,312 };
-	struct Kisi kisi3 = { "kelam","selam",412,231,312 };
-	struct Kisi kisi4 = { "kalem","selam",11213,231,312 };
+	struct Kisi kisi = { "ahmet",12123,231,312 };
+	struct Kisi kisi1 = { "mur",61213,231,312 };
+	struct Kisi kisi2 = { "asd",12113999,231,312 };
+	struct Kisi kisi3 = { "kelam",412,231,312 };
+	struct Kisi kisi4 = { "kalem",11213,231,312 };
 	struct Kisi kisiler[65];
-	kisiler[0] = kisi;
-	kisiler[1] = kisi1;
-	kisiler[2] = kisi2;
-	kisiler[3] = kisi3;
-	kisiler[4] = kisi4;
+	struct Kisi* root;
+	root = (struct Kisi*)malloc(sizeof(struct Kisi));
 
-	struct Kisi enbuyuk = EnbuyukBul(kisiler);
+	root = &kisi;
+	root->sonraki = &kisi1;
+	root->sonraki->sonraki = &kisi2;
+	root->sonraki->sonraki->sonraki = &kisi3;
+	root->sonraki->sonraki->sonraki->sonraki = &kisi4;
 
 
-	printf(enbuyuk.ad);
-	struct Oyun oyun ={1,5};
+	struct Kisi enbuyuk = EnbuyukBul(kisi);
 
-	printf("%d", (oyun.masadakiPAra+1));
-}
+
+	printf(enbuyuk.adSoyad);
+	struct Oyun oyun = { 1,5 };
+
+	printf("%d", (oyun.masadakiPAra + 1));
+
+	kisiYazdir("adas");
+};
