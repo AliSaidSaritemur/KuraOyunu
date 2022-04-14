@@ -11,6 +11,7 @@ int paraYatirdigiSayi;
 struct Kisi* sonraki;
 };
 
+struct Kisi KisiEKle();
 struct Kisi EnbuyukBul(Kisi);
 
 #endif

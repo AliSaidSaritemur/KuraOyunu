@@ -11,3 +11,9 @@ struct Kisi EnbuyukBul(struct Kisi kisi) {
 	return enbuyuk;
 }
 
+struct Kisi KisiEKle() {
+
+	struct Kisi bemp = { " ",0,0,0 };
+
+	return bemp;
+};
