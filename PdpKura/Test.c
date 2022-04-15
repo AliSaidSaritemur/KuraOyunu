@@ -2,10 +2,12 @@
 #include "Kisi.h"
 #include "Oyun.h"
 #include "Dosya.h"
+#include <Windows.h>
+#include <stdlib.h>
 int main() {
 
 
-
+	
 
 	struct Kisi kisi = { "ahmet",12123,231,312 };
 	struct Kisi kisi1 = { "mur",61213,231,312 };
@@ -25,16 +27,35 @@ int main() {
 struct Kisi enkucuk =kisiYazdir("adas");
 
 	struct Kisi enbuyuk = EnbuyukBul(enkucuk);
-	
+	int tur = 1;
 	float masadakiPara=0;
 	struct Oyun oyun = kuradakiSayi();
+	
+	struct Oyun* next = &oyun;
 
+	while(next->sonraki != NULL){	
+		
 struct Kisi kok = { "asdads",12,120,210 };
 kok.sonraki = &enkucuk;
+*next =masadakiPArayiBul(kok, *next);
+printf("                            #########################################################\n");
+printf("			    ##		        SANSLI SAYI: %d			   ##\n", next->kuradakiSayi);
+printf("                            #########################################################\n");
+printf("                            #########################################################\n");
+printf("			    ##			   TUR: %d			   ##\n",tur);
+printf("			    ##		        MASA BAKIYE: %f	   ##\n", next->masadakiPAra);
+printf("			    ##-----------------------------------------------------##\n");
+printf("			    ##			EN ZENGIN KISI			   ##\n");
+printf("			    ##		        %s			   ##\n", EnbuyukBul(enkucuk).adSoyad);
+printf("			    ##		        %f			   ##\n", EnbuyukBul(enkucuk).mevcutPara);
+printf("                            #########################################################\n");
+next = next->sonraki;
 
-oyun =masadakiPArayiBul(kok,oyun);
 
-printf("%.2f \n", oyun.masadakiPAra);
+tur++;
+	Sleep(1000);
+		system("cls");
+	}
 
-printf("%.2f", enkucuk.mevcutPara);
+
 };

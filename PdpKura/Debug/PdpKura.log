@@ -1,16 +1,4 @@
-﻿  Dosya.c
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(29,22): warning C4047: '==': 'int' differs in levels of indirection from 'void *'
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(46,36): warning C4013: 'malloc' undefined; assuming extern returning int
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(10,8): warning C4101: 'mevcutPara': unreferenced local variable
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(12,7): warning C4101: 'paraYatirdigiSayi': unreferenced local variable
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(14,7): warning C4101: 'paraustu': unreferenced local variable
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(11,8): warning C4101: 'yatirdigiPara': unreferenced local variable
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(45,14): warning C4101: 'temp': unreferenced local variable
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(66,6): warning C4101: 'numara': unreferenced local variable
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Dosya.c(74,15): warning C4101: 'temp': unreferenced local variable
-  Oyun.c
-  Test.c
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Test.c(17,29): warning C4013: 'malloc' undefined; assuming extern returning int
-C:\Users\alisa\source\repos\PdpKura\PdpKura\Test.c(27,14): warning C4101: 'enbuyuk': unreferenced local variable
-  Generating Code...
+﻿  Test.c
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(9531,5): warning C5105: macro expansion producing 'defined' has undefined behavior
+C:\Users\alisa\source\repos\PdpKura\PdpKura\Test.c(29,14): warning C4101: 'enbuyuk': unreferenced local variable
   PdpKura.vcxproj -> C:\Users\alisa\source\repos\PdpKura\Debug\PdpKura.exe
