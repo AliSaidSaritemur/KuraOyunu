@@ -10,6 +10,6 @@ struct Oyun
 	struct Oyun* sonraki;
 };
 
-float masadakiPArayiBul(struct Kisi kisi,int kuraSayisi);
+struct Oyun masadakiPArayiBul(struct Kisi kisi, struct Oyun oyun);
 
 #endif

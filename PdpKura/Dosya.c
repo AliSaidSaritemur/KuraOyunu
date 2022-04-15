@@ -74,6 +74,7 @@ dosya = fopen("Sayilar.txt", "r");
 		struct Oyun temp;
 		gec->sonraki = (struct Oyun*)malloc(sizeof(struct Oyun));
 		fscanf(dosya,"%d", &gec->sonraki->kuradakiSayi);
+		gec->sonraki->masadakiPAra = 0;
 		gec = gec->sonraki;
 			
 	}
