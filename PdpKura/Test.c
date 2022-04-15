@@ -26,10 +26,15 @@ struct Kisi enkucuk =kisiYazdir("adas");
 
 	struct Kisi enbuyuk = EnbuyukBul(enkucuk);
 	
-	printf("%.2f", enbuyuk.mevcutPara);
-	struct Oyun oyun = { 1,5 };
 
-	
+	struct Oyun oyun = { 0,0,0 };
 
-	
+struct Kisi kok = { "asdads",12,120,210 };
+kok.sonraki = &enkucuk;
+float a=masadakiPArayiBul(kok,1);
+
+
+
+
+printf("%.2f", enkucuk.mevcutPara);
 };

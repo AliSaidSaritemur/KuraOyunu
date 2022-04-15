@@ -39,8 +39,6 @@ fclose(dosya);
 dosyaOku = fopen("DuzenliKisi.txt", "r");
 
 struct Kisi* gec;
-gec = (struct Kisi*)malloc(sizeof(struct Kisi));
-
 gec = &yeniKisi;
 
 while (!feof(dosyaOku)) {
@@ -54,13 +52,32 @@ while (!feof(dosyaOku)) {
 	
 
 	gec = gec->sonraki;
-	printf("KG AGA  %s \n ",gec->adSoyad); 
+
 
 }
 gec->sonraki = NULL;
-printf("KG AGA  %s \n ", yeniKisi.sonraki->sonraki->adSoyad);
-	return yeniKisi;
+	return *yeniKisi.sonraki;
 }
 
 
 
+struct Oyun kuradakiSayi() {
+	struct Oyun anaOYun = {0,0,0};
+	int numara;
+	FILE* dosya;
+	struct Oyun* gec;
+	gec = &anaOYun;
+	int i = 0;
+dosya = fopen("Sayilar.txt", "r");
+	while (!feof(dosya)) {
+
+		struct Oyun temp;
+		gec->sonraki = (struct Oyun*)malloc(sizeof(struct Oyun));
+		fscanf(dosya,"%d", &gec->sonraki->kuradakiSayi);
+		gec = gec->sonraki;
+			
+	}
+	gec->sonraki = NULL;
+
+	return *anaOYun.sonraki;
+};

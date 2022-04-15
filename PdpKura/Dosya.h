@@ -2,10 +2,11 @@
 #define Dosya_H
 #define _CRT_SECURE_NO_DEPRECATE
 
+#include "Oyun.h"
 #include "Kisi.h"
 #include <stdio.h>
 
 struct Kisi kisiYazdir(char konum[80] );
-
+struct Oyun kuradakiSayi();
 
 #endif

@@ -5,8 +5,11 @@
 
 struct Oyun
 {
-	int masadakiPAra;
-	int turSayisi;
-
+	float masadakiPAra;
+	int kuradakiSayi;
+	struct Oyun* sonraki;
 };
+
+float masadakiPArayiBul(struct Kisi kisi,int kuraSayisi);
+
 #endif

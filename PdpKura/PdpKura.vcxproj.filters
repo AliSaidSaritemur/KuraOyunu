@@ -49,5 +49,8 @@
     <Text Include="DuzenliKisi.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="Sayilar.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

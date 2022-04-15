@@ -153,6 +153,7 @@
   <ItemGroup>
     <Text Include="DuzenliKisi.txt" />
     <Text Include="Kisi.txt" />
+    <Text Include="Sayilar.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
