@@ -28,13 +28,14 @@ struct Kisi enkucuk =kisiYazdir("adas");
 
 	struct Kisi enbuyuk = EnbuyukBul(enkucuk);
 	int tur = 1;
-	float masadakiPara=0;
+	float masadakiPara=0;	
 	struct Oyun oyun = kuradakiSayi();
-	
-	struct Oyun* next = &oyun;
 
+	struct Oyun* next = &oyun;
+	
 	while(next->sonraki != NULL){	
-		
+	
+		system("cls");
 struct Kisi kok = { "asdads",12,120,210 };
 kok.sonraki = &enkucuk;
 *next =masadakiPArayiBul(kok, *next);
@@ -43,18 +44,17 @@ printf("			    ##		        SANSLI SAYI: %d			   ##\n", next->kuradakiSayi);
 printf("                            #########################################################\n");
 printf("                            #########################################################\n");
 printf("			    ##			   TUR: %d			   ##\n",tur);
-printf("			    ##		        MASA BAKIYE: %f	   ##\n", next->masadakiPAra);
+printf("			    ##		        MASA BAKIYE: %.2f TL   	   ##\n", next->masadakiPAra);
 printf("			    ##-----------------------------------------------------##\n");
 printf("			    ##			EN ZENGIN KISI			   ##\n");
 printf("			    ##		        %s			   ##\n", EnbuyukBul(enkucuk).adSoyad);
-printf("			    ##		        %f			   ##\n", EnbuyukBul(enkucuk).mevcutPara);
+printf("			    ##		    BAKIYESI: %.0f			   ##\n", EnbuyukBul(enkucuk).mevcutPara);
 printf("                            #########################################################\n");
 next = next->sonraki;
 
-
 tur++;
-	Sleep(1000);
-		system("cls");
+	kisiSil(enkucuk);
+		
 	}
 
 

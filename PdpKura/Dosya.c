@@ -62,7 +62,7 @@ gec->sonraki = NULL;
 
 
 struct Oyun kuradakiSayi() {
-	struct Oyun anaOYun = {0,0,0};
+	struct Oyun anaOYun = {0,0};
 	int numara;
 	FILE* dosya;
 	struct Oyun* gec;
@@ -78,7 +78,8 @@ dosya = fopen("Sayilar.txt", "r");
 		gec = gec->sonraki;
 			
 	}
+	anaOYun.kuradakiSayi = gec->kuradakiSayi;
 	gec->sonraki = NULL;
-
-	return *anaOYun.sonraki;
+	
+	return anaOYun;
 };

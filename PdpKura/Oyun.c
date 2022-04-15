@@ -13,22 +13,36 @@ struct Oyun masadakiPArayiBul(struct Kisi kisi,struct Oyun oyun) {
 		
 		if (gec->sonraki->paraYatirdigiSayi == oyun.kuradakiSayi) {
 			para = (gec->sonraki->yatirdigiPara) * (gec->sonraki->mevcutPara) * 10;
-			gec->sonraki->mevcutPara = gec->sonraki->mevcutPara + para;
+			gec->sonraki->mevcutPara = (gec->sonraki->mevcutPara)  +para;
 			oyun.masadakiPAra = oyun.masadakiPAra - para;
 		}
 		else {
 			para = (gec->sonraki->yatirdigiPara) * (gec->sonraki->mevcutPara);
-			gec->sonraki->mevcutPara = gec->sonraki->mevcutPara - para;
 			oyun.masadakiPAra = oyun.masadakiPAra + para;
+			gec->sonraki->mevcutPara = gec->sonraki->mevcutPara - para;
+			
 		}
 		
 		gec = gec->sonraki;
 	}
-	
+	if(oyun.sonraki !=NULL){
 	oyun.sonraki->masadakiPAra = oyun.masadakiPAra;
-
+}
 	return oyun;
 };
 
 
+void kisiSil(struct Kisi kisi) {
+	
+	struct Kisi enbuyuk = kisi;
+	struct Kisi* gec = &kisi;
+	while (gec->sonraki !=NULL&& gec->sonraki->sonraki != NULL) {
+	
+		if (gec->sonraki->mevcutPara < 1000) {
+			gec->sonraki = gec->sonraki->sonraki;
+		}
 
+		gec =gec->sonraki;
+	}
+
+};
