@@ -15,7 +15,7 @@ struct Kisi kisiYazdir(char konum[80]) {
 	FILE* dosya;
 	FILE* dosyaYaz;
 	FILE* dosyaOku;
-	struct Kisi yeniKisi = {" ",0,0,0};
+	struct Kisi yeniKisi = {"asdads",12,120,210};
 	dosya = fopen("Kisi.txt", "r");
 	dosyaYaz = fopen("DuzenliKisi.txt", "w");
 	while (!feof(dosya)) {	
@@ -57,6 +57,7 @@ while (!feof(dosyaOku)) {
 	printf("KG AGA  %s \n ",gec->adSoyad); 
 
 }
+gec->sonraki = NULL;
 printf("KG AGA  %s \n ", yeniKisi.sonraki->sonraki->adSoyad);
 	return yeniKisi;
 }

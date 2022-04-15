@@ -22,11 +22,11 @@ int main() {
 	root->sonraki->sonraki->sonraki = &kisi3;
 	root->sonraki->sonraki->sonraki->sonraki = &kisi4;
 
+struct Kisi enkucuk =kisiYazdir("adas");
 
-	struct Kisi enbuyuk = EnbuyukBul(kisi);
-	struct Kisi enkucuk =kisiYazdir("adas");
-
-	printf("%.2f",enkucuk.sonraki->mevcutPara);
+	struct Kisi enbuyuk = EnbuyukBul(enkucuk);
+	
+	printf("%.2f", enbuyuk.mevcutPara);
 	struct Oyun oyun = { 1,5 };
 
 	
