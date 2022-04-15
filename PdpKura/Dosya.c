@@ -1,7 +1,7 @@
 #include "Dosya.h"
 #include <stdio.h>
 #include <string.h>
-struct Kisi kisiYazdir(char konum[80]) {
+struct Kisi kisiYazdir() {
 	int sayac=0;
 	int i = 1;
 	int sayi2=0;

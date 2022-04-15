@@ -12,6 +12,6 @@ struct Kisi* sonraki;
 };
 
 
-struct Kisi EnbuyukBul(Kisi);
+struct Kisi EnbuyukBul(struct Kisi kisi);
 
 #endif
