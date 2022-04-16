@@ -1,6 +1,8 @@
+#define _CRT_SECURE_NO_DEPRECATE
 #include "Dosya.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 struct Kisi kisiYazdir() {
 	int sayac=0;
 	int i = 1;
@@ -20,13 +22,13 @@ struct Kisi kisiYazdir() {
 	dosyaYaz = fopen("DuzenliKisi.txt", "w");
 	while (!feof(dosya)) {	
 
-			fscanf(dosya," %s %s", &ad,&soyad);	
+			fscanf(dosya," %s", &ad,&soyad);	
 			strncat(ad, " ",100);
 			strncat(ad, soyad,100);
 
 			for (int i = 0; i < 199; i++)
 			{
-				if (ad[i] == NULL)
+				if (ad[i] == ' ')
 					break;
 				if (ad[i] == '#')
 					ad[i] = ' ';
@@ -55,6 +57,7 @@ while (!feof(dosyaOku)) {
 
 
 }
+fclose(dosyaOku);
 gec->sonraki = NULL;
 	return *yeniKisi.sonraki;
 }
@@ -65,6 +68,7 @@ struct Oyun kuradakiSayi() {
 	struct Oyun anaOYun = {0,0};
 	int numara;
 	FILE* dosya;
+	
 	struct Oyun* gec;
 	gec = &anaOYun;
 	int i = 0;
@@ -78,8 +82,11 @@ dosya = fopen("Sayilar.txt", "r");
 		gec = gec->sonraki;
 			
 	}
-	anaOYun.kuradakiSayi = gec->kuradakiSayi;
-	gec->sonraki = NULL;
-	
-	return anaOYun;
+	gec->sonraki = (struct Oyun*)malloc(sizeof(struct Oyun));
+	gec->sonraki->kuradakiSayi = gec->kuradakiSayi;
+	gec->sonraki->masadakiPAra = 0;
+	gec->sonraki->sonraki = NULL;
+
+	return *anaOYun.sonraki;
 };
+

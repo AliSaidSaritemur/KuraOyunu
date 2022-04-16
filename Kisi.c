@@ -5,6 +5,8 @@ struct Kisi EnbuyukBul(struct Kisi kisi) {
 	struct Kisi enbuyuk = kisi;
 	struct Kisi *gec = &kisi;
 	while(gec->sonraki !=NULL){	
+
+	
          struct Kisi gecmis = *gec->sonraki; 
 		
 		if (gecmis.mevcutPara > enbuyuk.mevcutPara){
@@ -12,6 +14,12 @@ struct Kisi EnbuyukBul(struct Kisi kisi) {
 		gec = gec->sonraki;
 	
 	}
+
+	if (enbuyuk.mevcutPara < 1000) {
+		kisi.mevcutPara = -1;
+		return kisi;
+	}
+
 	return enbuyuk;
 }
 

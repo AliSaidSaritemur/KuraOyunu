@@ -5,13 +5,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <stdlib.h>
 struct Oyun
 {
 	float masadakiPAra;
 	int kuradakiSayi;
 	struct Oyun* sonraki;
 };
-void kisiSil(struct Kisi*kisi);
-struct Oyun masadakiPArayiBul(struct Kisi*kisi, struct Oyun oyun);
+struct Oyun masadakiPArayiBul(struct Kisi kisi, struct Oyun oyun);
 
 #endif
