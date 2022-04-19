@@ -19,7 +19,7 @@ int main() {
 	
 	while(next->sonraki != NULL){	
 	
-		system("cls");
+		
 		struct Kisi kok = { "asdads",12,120,210 };
 
 kok.sonraki = &kokKisi;
@@ -42,7 +42,8 @@ if (kokKisi.mevcutPara == -1){
 	break;
 }
 next = next->sonraki;
-Sleep(5);
+Sleep(50);
+system("cls");
 tur++;
 	}
 	system("cls");
