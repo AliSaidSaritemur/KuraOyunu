@@ -12,6 +12,6 @@ struct Kisi* sonraki;
 };
 
 
-struct Kisi EnbuyukBul(struct Kisi kisi);
+struct Kisi EnbuyukBul(struct Kisi kisi); //En buyuk sayiyi bulur
 
 #endif

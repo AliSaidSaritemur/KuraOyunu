@@ -6,14 +6,14 @@
 #include <stdlib.h>
 int main() {
 
-
+	struct Dosya dosya = {"Kisiler.txt","Sayilar.txt"};
 	
-struct Kisi enkucuk =kisiYazdir();
-
-	struct Kisi enbuyuk = EnbuyukBul(enkucuk);
+	struct Kisi kokKisi =kisiYazdir(dosya);
+	
+	struct Kisi enbuyuk = EnbuyukBul(kokKisi);
 	int tur = 1;
-	float masadakiPara=0;	
-	struct Oyun oyun = kuradakiSayi();
+	
+	struct Oyun oyun = kuradakiSayi(dosya);
 
 	struct Oyun* next = &oyun;
 	
@@ -22,7 +22,7 @@ struct Kisi enkucuk =kisiYazdir();
 		system("cls");
 		struct Kisi kok = { "asdads",12,120,210 };
 
-kok.sonraki = &enkucuk;
+kok.sonraki = &kokKisi;
 
 *next =masadakiPArayiBul(kok, *next);
 printf("                            #########################################################\n");
@@ -33,16 +33,16 @@ printf("			    ##			   TUR: %d			   ##\n",tur);
 printf("			    ##		        MASA BAKIYE: %.0f TL   	   ##\n", next->masadakiPAra);
 printf("			    ##-----------------------------------------------------##\n");
 printf("			    ##			EN ZENGIN KISI			   ##\n");
-printf("			    ##		        %s			   ##\n", EnbuyukBul(enkucuk).adSoyad);
-printf("			    ##		    BAKIYESI: %.0f			   ##\n", EnbuyukBul(enkucuk).mevcutPara);
+printf("			    ##		        %s			   ##\n", EnbuyukBul(kokKisi).adSoyad);
+printf("			    ##		    BAKIYESI: %.0f			   ##\n", EnbuyukBul(kokKisi).mevcutPara);
 printf("                            #########################################################\n");
 
-if (enkucuk.mevcutPara == -1){
+if (kokKisi.mevcutPara == -1){
 	tur++;
 	break;
 }
 next = next->sonraki;
-Sleep(9000);
+Sleep(5);
 tur++;
 	}
 	system("cls");

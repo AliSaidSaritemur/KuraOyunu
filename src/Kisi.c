@@ -22,4 +22,3 @@ struct Kisi EnbuyukBul(struct Kisi kisi) {
 
 	return enbuyuk;
 }
-
