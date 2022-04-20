@@ -5,8 +5,8 @@
 struct Kisi
 {
 char adSoyad[200];
-float mevcutPara;
-float yatirdigiPara;
+double mevcutPara;
+double yatirdigiPara;
 int paraYatirdigiSayi;
 struct Kisi* sonraki;
 };

@@ -15,9 +15,9 @@ struct Kisi EnbuyukBul(struct Kisi kisi) {
 	
 	}
 
-	if (enbuyuk.mevcutPara < 1000) {
+	if (enbuyuk.mevcutPara <= 1000) {
+		enbuyuk.mevcutPara = -1;
 		kisi.mevcutPara = -1;
-		return kisi;
 	}
 
 	return enbuyuk;

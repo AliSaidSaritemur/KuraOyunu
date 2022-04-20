@@ -8,7 +8,7 @@
 #include <stdlib.h>
 struct Oyun
 {
-	float masadakiPAra;
+	double masadakiPAra;
 	int kuradakiSayi;
 	struct Oyun* sonraki;
 };

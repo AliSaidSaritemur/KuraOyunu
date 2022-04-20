@@ -25,38 +25,41 @@ int main() {
 kok.sonraki = &kokKisi;
 
 *next =masadakiPArayiBul(kok, *next);
-printf("                            #########################################################\n");
+enbuyuk = EnbuyukBul(kokKisi);
+printf("\n\n                            #########################################################\n");
 printf("			    ##		        SANSLI SAYI: %d			   ##\n", next->kuradakiSayi);
 printf("                            #########################################################\n");
 printf("                            #########################################################\n");
 printf("			    ##			   TUR: %d			   ##\n",tur);
-printf("			    ##		        MASA BAKIYE: %.0f TL   	   ##\n", next->masadakiPAra);
+printf("			    ##		        MASA BAKIYE: %.0lf TL   	   ##\n", next->masadakiPAra);
 printf("			    ##-----------------------------------------------------##\n");
 printf("			    ##			EN ZENGIN KISI			   ##\n");
-printf("			    ##		        %s			   ##\n", EnbuyukBul(kokKisi).adSoyad);
-printf("			    ##		    BAKIYESI: %.0f			   ##\n", EnbuyukBul(kokKisi).mevcutPara);
+printf("			    ##		        %s			   ##\n", enbuyuk.adSoyad);
+printf("			    ##		    BAKIYESI: %.0lf			   ##\n", enbuyuk.mevcutPara);
 printf("                            #########################################################\n");
-
+  
 if (kokKisi.mevcutPara == -1){
 	tur++;
 	break;
 }
 next = next->sonraki;
+
+tur++;
 Sleep(50);
 system("cls");
-tur++;
 	}
 	system("cls");
-	printf("                            #########################################################\n");
+	printf("\n\n                            #########################################################\n");
 	printf("			    ##			   TUR: %d			   ##\n", tur);
-	printf("			    ##		        MASA BAKIYE: %.2f TL   	   ##\n", next->masadakiPAra);
+	printf("			    ##		        MASA BAKIYE: %.2lf TL        ##\n", next->masadakiPAra);
 	printf("			    ##		        	 			   ##\n");
 	printf("			    ##-----------------------------------------------------##\n");
 	printf("			    ##			OYUN BITTI			   ##\n");
 	printf("			    ##		        	 			   ##\n");
-	printf("			    ##		        	 			   ##\n");
+	printf("			    ##      Bedava Peynir Sadece Fare Kapaninda olur       ##\n");
 	printf("			    ##		        	 			   ##\n");
 	printf("                            #########################################################\n");
 	
-	system("Pause");
+	getchar();   
+	return 0;
 };

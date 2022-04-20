@@ -17,7 +17,7 @@ struct Kisi kisiYazdir(struct Dosya dosyaYolu) {
 		fgets(satir, 400, dosya);
 		struct Kisi temp;
 		gec->sonraki = (struct Kisi*)malloc(sizeof(struct Kisi));
-		sscanf(satir,"%[^#]#%f#%f#%d", &gec->sonraki->adSoyad, &gec->sonraki->mevcutPara, &gec->sonraki->yatirdigiPara, &gec->sonraki->paraYatirdigiSayi);
+		sscanf(satir,"%[^#]#%lf#%lf#%d", &gec->sonraki->adSoyad, &gec->sonraki->mevcutPara, &gec->sonraki->yatirdigiPara, &gec->sonraki->paraYatirdigiSayi);
 
 		gec = gec->sonraki;
 	}
