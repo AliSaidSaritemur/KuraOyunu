@@ -23,7 +23,7 @@ struct Oyun masadakiPArayiBul(struct Kisi kisi,struct Oyun oyun) {
 
 	while (gec->sonraki != NULL) {
 	
-		if (gec->sonraki->mevcutPara <= 1000){
+		if (gec->sonraki->mevcutPara < 1000){
 			gec = gec->sonraki;
 			continue;}
 		else{}

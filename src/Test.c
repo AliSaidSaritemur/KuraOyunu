@@ -19,14 +19,14 @@ int main() {
 	struct Kisi kokKisi =kisiYazdir(dosya);
 	
 	struct Kisi enbuyuk = EnbuyukBul(kokKisi);
-	int tur = 1;
+	int tur = 0;
 	
 	struct Oyun oyun = kuradakiSayi(dosya);
 
 	struct Oyun* next = &oyun;
 	
 	while(next->sonraki != NULL){	
-	
+		tur++;
 		
 		struct Kisi kok = { "asdads",12,120,210 };
 
@@ -52,7 +52,7 @@ if (kokKisi.mevcutPara == -1){
 }
 next = next->sonraki;
 
-tur++;
+
 Sleep(50);
 system("cls");
 	}
