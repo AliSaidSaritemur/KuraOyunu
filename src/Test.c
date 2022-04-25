@@ -1,3 +1,11 @@
+/**
+*
+* @author Ali Said Saritemur
+* @ 26.04.2022
+* <p>
+* 2C G201210044
+* </p>
+*/
 #include <stdio.h>
 #include "Kisi.h"
 #include "Oyun.h"
@@ -60,6 +68,8 @@ system("cls");
 	printf("			    ##		        	 			   ##\n");
 	printf("                            #########################################################\n");
 	
-	getchar();   
+
+
+	system("pause");
 	return 0;
 };

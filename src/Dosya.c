@@ -1,3 +1,11 @@
+/**
+*
+* @author Ali Said Saritemur
+* @ 26.04.2022
+* <p>
+* 2C G201210044
+* </p>
+*/
 #define _CRT_SECURE_NO_DEPRECATE
 #include "Dosya.h"
 #include <stdio.h>

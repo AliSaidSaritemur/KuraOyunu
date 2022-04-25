@@ -1,3 +1,13 @@
+/**
+*
+* @author Ali Said Saritemur
+* @ 26.04.2022
+* <p>
+* 2C G201210044
+* </p>
+*/
+
+
 #include "Oyun.h"
 #include <stdio.h>
 #include <string.h>
@@ -20,15 +30,16 @@ struct Oyun masadakiPArayiBul(struct Kisi kisi,struct Oyun oyun) {
 		if (gec->sonraki->paraYatirdigiSayi == oyun.kuradakiSayi) {
 			 oncekiPara = gec->sonraki->mevcutPara;
 			para = (gec->sonraki->yatirdigiPara) * (gec->sonraki->mevcutPara) * 10;
+		
 			gec->sonraki->mevcutPara = (gec->sonraki->mevcutPara) * (1 - gec->sonraki->yatirdigiPara) + para;
-			gec->sonraki->mevcutPara = round(gec->sonraki->mevcutPara * 100) / 100;
+
 			oyun.masadakiPAra -= ( gec->sonraki->mevcutPara - oncekiPara);
 		}
 		else {
 			 oncekiPara = gec->sonraki->mevcutPara;
 			para = (gec->sonraki->yatirdigiPara) * (gec->sonraki->mevcutPara);
 		gec->sonraki->mevcutPara = gec->sonraki->mevcutPara - para;
-			gec->sonraki->mevcutPara = round(gec->sonraki->mevcutPara * 100) / 100;
+		
 
 			oyun.masadakiPAra +=(oncekiPara - gec->sonraki->mevcutPara) ;
 		

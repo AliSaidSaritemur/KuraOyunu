@@ -20,3 +20,5 @@ Dosya.o:Dosya.c
 	
 calistirma:
 	./bin/program
+	
+calistirma:
