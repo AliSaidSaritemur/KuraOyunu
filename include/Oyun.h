@@ -12,6 +12,6 @@ struct Oyun
 	int kuradakiSayi;
 	struct Oyun* sonraki;
 };
-struct Oyun masadakiPArayiBul(struct Kisi kisi, struct Oyun oyun);
+struct Oyun masadakiPArayiBul(struct Kisi * kisi, struct Oyun oyun);
 
 #endif

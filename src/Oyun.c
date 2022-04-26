@@ -14,12 +14,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-struct Oyun masadakiPArayiBul(struct Kisi kisi,struct Oyun oyun) {
+struct Oyun masadakiPArayiBul(struct Kisi * kisi,struct Oyun oyun) {
 	struct Kisi yeniKisi = { "asdads",12,20,101 };
 	struct Kisi* gec = &yeniKisi;
 	double para = 0;
 	double oncekiPara = 0;
-	gec->sonraki = kisi.sonraki;
+	gec->sonraki = kisi;
 
 	while (gec->sonraki != NULL) {
 	
@@ -41,10 +41,7 @@ struct Oyun masadakiPArayiBul(struct Kisi kisi,struct Oyun oyun) {
 		gec->sonraki->mevcutPara = gec->sonraki->mevcutPara - para;
 		
 
-			oyun.masadakiPAra +=(oncekiPara - gec->sonraki->mevcutPara) ;
-		
-
-			
+			oyun.masadakiPAra +=(oncekiPara - gec->sonraki->mevcutPara) ;	
 		}
 
 		gec = gec->sonraki;
@@ -52,28 +49,5 @@ struct Oyun masadakiPArayiBul(struct Kisi kisi,struct Oyun oyun) {
 
 	oyun.sonraki->masadakiPAra = oyun.masadakiPAra;
 
-
 	return oyun;
-};
-
-
-void kisiSil(struct Kisi* kisi) {
-
-	struct Kisi yeniKisi = { "asdads",12,20,101 };
-	yeniKisi.sonraki = kisi;
-	struct Kisi* gec = &yeniKisi;
-
-	while (gec->sonraki != NULL && gec->sonraki->sonraki != NULL) {
-
-		if (gec->sonraki->mevcutPara < 1000) {
-			gec->sonraki = gec->sonraki->sonraki;
-		}
-
-		gec = gec->sonraki;
-	}
-	if (gec->sonraki != NULL) {
-		if (gec->sonraki->mevcutPara < 1000)
-			gec->sonraki = NULL;
-	}
-
 };

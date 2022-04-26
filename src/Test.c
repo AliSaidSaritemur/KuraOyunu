@@ -27,12 +27,8 @@ int main() {
 	
 	while(next->sonraki != NULL){	
 		tur++;
-		
-		struct Kisi kok = { "asdads",12,120,210 };
 
-kok.sonraki = &kokKisi;
-
-*next =masadakiPArayiBul(kok, *next);
+*next =masadakiPArayiBul(&kokKisi, *next);
 enbuyuk = EnbuyukBul(kokKisi);
 printf("\n\n                            #########################################################\n");
 printf("			    ##		        SANSLI SAYI: %d			   ##\n", next->kuradakiSayi);
@@ -46,17 +42,14 @@ printf("			    ##		        %s			   ##\n", enbuyuk.adSoyad);
 printf("			    ##		    BAKIYESI: %.0lf			   ##\n", enbuyuk.mevcutPara);
 printf("                            #########################################################\n");
   
-if (kokKisi.mevcutPara == -1){
-	tur++;
+if (enbuyuk.mevcutPara <1000){
 	break;
 }
 next = next->sonraki;
 
 
-Sleep(50);
-system("cls");
 	}
-	system("cls");
+
 	printf("\n\n                            #########################################################\n");
 	printf("			    ##			   TUR: %d			   ##\n", tur);
 	printf("			    ##		        MASA BAKIYE: %.2lf TL        ##\n", next->masadakiPAra);
